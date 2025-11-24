@@ -22,6 +22,7 @@ class Personal(Mail):
     def show_email(self):
         return (
             "PERSONAL\n"
+            f"m_id: {self.m_id}\n"
             f"From: {self.frm}\n"
             f"Date: {self.date}\n"
             f"Subject: {self.subject}\n"

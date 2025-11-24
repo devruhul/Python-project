@@ -53,6 +53,7 @@ class Confidential(Mail):
     def show_email(self):
         return (
             "CONFIDENTIAL\n"
+            f"m_id: {self.m_id}\n"
             f"From: {self.frm}\n"
             f"Date: {self.date}\n"
             f"Subject: {self.subject}\n"
