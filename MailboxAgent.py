@@ -69,9 +69,8 @@ class MailboxAgent:
         return "Email not found."
 
     # FA.4
-    #
+    # filtering emails with the email address from the mailbox
     def filter(self, frm):
-        # filtering emails with the email address from the mailbox
         filtered_emails = []
         for mail in self._mailbox:
             if mail.frm == frm:

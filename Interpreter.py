@@ -122,34 +122,39 @@ def loop():
                 # getting the email ID from args list to delete email
                 deleteEmailID = args[0]
                 print(mba.del_email(deleteEmailID))
+                
             case "flt":
-                # called filter method from MailboxAgent class to filter emails from given sender
+                # calling filter method from MailboxAgent class to filter emails from given sender
                 sender = args[0]
                 print(mba.filter(sender))
-
+                
             case "fnd":
                 # finding emails from given date
                 date = args[0]
                 print(mba.find(date))
-
+                
             case "get":
                 #  displaying email with given ID
                 getEmailID = args[0]
                 print(mba.get_email(getEmailID))
+                
             case "lst":
                 # displaying entire mailbox
                 email = mba.show_emails()
                 print(email)
+                
             case "mrkr":
-                #    mark email with given ID as Read then display that email
+                #    marking email with given ID as Read then display that email
                 markReadEmailID = args[0]
                 print(mba.mark(markReadEmailID, "read"))
+                
             case "mrkf":
-                #    mark email with given ID as Flagged then display that email
+                #    marking email with given ID as Flagged then display that email
                 markFlagEmailID = args[0]
                 print(mba.mark(markFlagEmailID, "flag"))
-            case "mv":  # move email with given ID to folder in given tag
-                # getting email ID and tag from args list to move email
+                
+            case "mv":  
+                # moving email with given ID to folder in given tag then display that email
                 moveEmailID = args[0]
                 tag = args[1]
                 print(mba.mv_email(moveEmailID, tag))
@@ -157,7 +162,6 @@ def loop():
         line = input("mba > ")
         words = line.split(" ")
         command, args = words[0], words[1:]
-
 
 if __name__ == "__main__":
     loop()
