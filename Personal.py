@@ -18,15 +18,19 @@ class Personal(Mail):
         super().__init__(m_id, frm, to, date, subject, tag, body)
         self._body = self.add_stats(self._body)
 
+# defining show_email method for pretty-printing personal emails
     def show_email(self):
-        print("PERSONAL")
-        print(f"From:{self.frm}")
-        print(f"To:{self.to}")
-        print(f"Date:{self.date}")
-        print(f"Subject:{self.subject}")
-        print(f"Body:{self.body}")
-        print(f"Read:{self.read}")
-
+        """Pretty-print ONLY for personal emails."""
+        return (
+            "PERSONAL\n"
+            f"From: {self.frm}\n"
+            f"Date: {self.date}\n"
+            f"Subject: {self.subject}\n"
+            f"Body:{self.body}\n"
+            f"Read " + ('Yes' if self._read else 'No') + "\n"
+            "------------------------------"
+        )
+        
     # FB.5.b
     #
     def add_stats(self, body):
