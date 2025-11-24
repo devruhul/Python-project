@@ -11,7 +11,6 @@
 # DO NOT CHANGE CLASS OR METHOD NAMES
 # replace "pass" with your own code as specified in the CW spec.
 
-from Mail import *
 from Confidential import *
 from Personal import *
 
@@ -185,6 +184,7 @@ class MailboxAgent:
     def add_email(self, frm, to, date, subject, tag, body):
 
         # Generate unique numeric m_id
+        global new_email
         if len(self._mailbox) == 0:
             m_id = "0"
         else:

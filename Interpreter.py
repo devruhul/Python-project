@@ -118,8 +118,8 @@ def loop():
 
             case "del":
                 # getting the email ID from args list to delete email
-                deleteEmailID = args[0]
-                print(mba.del_email(deleteEmailID))
+                delete_email_id = args[0]
+                print(mba.del_email(delete_email_id))
                 
             case "flt":
                 # calling filter method from MailboxAgent class to filter emails from given sender
@@ -133,8 +133,8 @@ def loop():
                 
             case "get":
                 #  displaying email with given ID
-                getEmailID = args[0]
-                print(mba.get_email(getEmailID))
+                get_email_id = args[0]
+                print(mba.get_email(get_email_id))
                 
             case "lst":
                 # displaying entire mailbox
@@ -143,19 +143,19 @@ def loop():
                 
             case "mrkr":
                 #    marking email with given ID as Read then display that email
-                markReadEmailID = args[0]
-                print(mba.mark(markReadEmailID, "read"))
+                mark_read_email_id = args[0]
+                print(mba.mark(mark_read_email_id, "read"))
                 
             case "mrkf":
                 #    marking email with given ID as Flagged then display that email
-                markFlagEmailID = args[0]
-                print(mba.mark(markFlagEmailID, "flag"))
+                mark_flag_email_id = args[0]
+                print(mba.mark(mark_flag_email_id, "flag"))
                 
             case "mv":  
                 # moving email with given ID to folder in given tag then display that email
-                moveEmailID = args[0]
+                move_email_id = args[0]
                 tag = args[1]
-                print(mba.mv_email(moveEmailID, tag))
+                print(mba.mv_email(move_email_id, tag))
 
         line = input("mba > ")
         words = line.split(" ")
